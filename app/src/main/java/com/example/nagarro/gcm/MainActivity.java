@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
@@ -24,7 +25,7 @@ import java.io.IOException;
 public class MainActivity extends ActionBarActivity {
 
     String regId;
-    static final String SENDER_ID = "ShouldNotshare";
+    static final String SENDER_ID = "763924717190";
 
 
     public String getRegIdFromSharedPreferences() {
@@ -75,6 +76,9 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         regId = getRegIdFromSharedPreferences();
+        Log.i("registeredID", regId);
+        TextView tv = (TextView)findViewById(R.id.text1);
+        tv.setText(regId);
         if (regId == null) {
             final Activity a = this;
             AsyncTask<Void, Void, String> task = new AsyncTask<Void, Void, String>() {

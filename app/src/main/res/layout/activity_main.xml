@@ -21,4 +21,15 @@
         android:layout_marginLeft="59dp"
         android:layout_marginStart="59dp" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="New Textt"
+        android:id="@+id/text1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
